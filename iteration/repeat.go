@@ -1,15 +1,12 @@
 package iteration
 
-func Repeat(c string) (repeated string) {
-	for i := 0; i < 5; i++ {
-		repeated += c
+import (
+	"strings"
+)
+
+func Repeat(c string, count int) (repeated string) {
+	if count < 0 {
+		return c
 	}
-
-	// i := 0
-	// for i < 5 {
-	// 	repeated = repeated + c
-	// 	i++
-	// }
-
-	return
+	return strings.Repeat(c, count)
 }
